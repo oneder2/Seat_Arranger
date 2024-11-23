@@ -192,7 +192,7 @@ class MainWindow(QMainWindow):
         self.table_widget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.table_widget.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
-        self.print_board_byline()
+#        self.print_board_byline()
         
 
 
