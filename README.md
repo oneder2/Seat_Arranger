@@ -1,48 +1,86 @@
-# Project name: Seat_Arranger
+# 🎲 Random Seat Arranger
 
-This is a random arrangement program aimming to randomize seating arrangement of any table-like seating format.
+A simple desktop application built with PyQt5 that generates randomized seating charts from a student list. Users can load `.txt` or `.csv` files, specify the number of columns, and the app will automatically display a well-formatted seating table that can be exported to a CSV file.
 
-# Suitable scenario:
-e.g.: if your seating layout is like:\
-[],[],...,[],...,[],[]\
-[],[],...,[],...,[],[]\
-...\
-[],[],...,[],...,[],[]\
-Then this project can be useful to you.
+## ✨ Features
 
+- Load student lists from `.txt` or `.csv` files
+- Generate random seating arrangements based on custom column count
+- Intuitive graphical interface (GUI)
+- Export seating charts to `.csv`
+- Automatically fills incomplete rows with empty seats for even layout
 
-# Environment:
-No extra environment setting is requiered.
+## 🖼️ UI Preview
 
-# How to run:
-- Linux: run "./dist/driver" under the main directory\
-- Window: no supporting yet\
-- Mac: no supporting yet
+> 📸 You can insert screenshots of the application interface here for visual presentation.
 
-# How to use (After run)
+## 🛠️ Getting Started
 
+### 1. Install Dependencies
 
+Make sure you have Python 3 installed, then run:
 
+```bash
+pip install pyqt5 pandas prompt_toolkit
+```
 
-# 项目名称：随机排座
+### 2. Run the Application
 
-简介：这是一个基于python，并利用pyqt进行可视化的排座位程序，适用于任意表格化座位分布的随机排座场景。
-比方说，如果你的座位表形如以下格式：\
-[],[],...,[],...,[],[]\
-[],[],...,[],...,[],[]\
-...\
-[],[],...,[],...,[],[]\
-而你希望将一定人员在这个空间中随机排序分配座位，那么这个项目可能可以帮到你
+```bash
+python driver.py
+```
 
-# 环境需求
-没有额外的环境需求，下载即用
+### 3. How to Use
 
-# 运行方法：
-- Linux：运行同目录下dist中driver文件。命令行命令为："./dist/driver"\
-- Windows：尚不支持\
-- Mac：尚不支持
+1. Click **"Select File"** to import a student list (`.txt` or `.csv`)
+   - `.txt`: One student name per line
+   - `.csv`: Must include a `name` column
+2. Enter the number of **columns**
+3. Click **"Start Sorting"** to generate the seating chart
+4. Use the **"Save"** option from the File menu to export the chart
 
+## 📂 Project Structure
 
+```
+.
+├── driver.py           # Entry point for the application
+├── main_window.py      # GUI implementation using PyQt5
+├── seat_arranger.py    # Core logic for loading, shuffling, and saving data
+└── README.md           # Project description (this file)
+```
 
+## 📥 Input Format Examples
 
+### TXT format:
 
+```
+Alice
+Bob
+Charlie
+```
+
+### CSV format:
+
+```csv
+name
+Alice
+Bob
+Charlie
+```
+
+## 💡 Highlights
+
+- Uses `QTableWidget` with auto-resize and centered text
+- Flexible file input format
+- Clear error messages and warnings
+- Clean layout, ideal for classrooms, exams, or workshops
+
+## 📄 License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute it.
+
+---
+
+👨‍💻 Developer: **Oneder2**  
+📫 Contact: gellar@tutanota.com
+🌱 Motivation: A fun practice project for learning PyQt5 and building useful automation tools
